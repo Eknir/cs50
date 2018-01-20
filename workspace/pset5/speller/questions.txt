@@ -1,0 +1,7 @@
+0.  The longest allowed word
+1.  the amount of time it took to execute a function
+2.  16
+3.  it safes memory space (we don't have to copy the value to memory)
+4.  Read a new character untill this character is equal to EOF, if the new character equals a letter or apostrophe, we safe this letter in an array. If the word is too long, we read the word until the end of the word and don't include the word in our list. If the word includes a digit, we read the word untill the end of the word and don't include the word in our list. Otherwise, we conditnue reading untill we find the end of the word. Consequently, we increase the word counter (word found!) and check the speling of the word in our dictionary.
+5.  fscanf reads untill a whitespace is founds. Words sometimes end with a puctiation, which will complicate the spelling checker (we have to correct for this)
+6.  ?

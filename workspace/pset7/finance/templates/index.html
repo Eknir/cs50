@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<head>
+    <style>
+        table {
+            width: 100%;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+</head>
+
+<p>
+<table>
+   <caption>Summary</caption>
+    <tr bgcolor = "#f2f2f2">
+        <td><b>Current Cash Balance</b></td>
+        <td>{{cash}}</td>
+    </tr>
+    <tr>
+        <td><b>Total Amount Invested</b></td>
+        <td>{{total_stock_value}}</td>
+    </tr>
+     <tr bgcolor = "#f2f2f2">
+        <td><b>Total Portfolio Value</b></td>
+        <td>{{portfolio_value}}</td>
+    </tr>
+</table>
+</p>
+<table>
+    <caption>Positions</caption>
+    <tr bgcolor = "#f2f2f2">
+        <th>Symbol</th>
+        <th>Amount</th>
+        <th>Current Price</th>
+        <th>Position Value</th>
+    </tr>
+<tr>
+{%for i in range(length)%}
+ <tr>
+     <td>{{holdings_symbol[i]}}</td>
+     <td>{{holdings_amount[i]}}</td>
+     <td>{{holdings_price[i]}}</td>
+     <td>{{holdings_value[i]}}</td>
+</tr>
+{%endfor%}
+</table>
+{% endblock %}
+

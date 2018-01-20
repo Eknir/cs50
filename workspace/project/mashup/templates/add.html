@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <h1>Add your own event!</h1>
+      <form name = "addForm" action="{{ url_for('add') }}" onsubmit="return validateAddForm()" method="post">
+
+        <div class = "row">
+          <div class="form-group col-xs-5">
+            <label for="code">Name of your event *:</label>
+            <input type="text" class="form-control" name = "name" />
+          </div>
+        </div>
+
+        <p style="color:red" id= "errorName"></p>
+
+        <div class = "row">
+          <div class="form-group col-xs-5">
+            <label for="code">City *:</label>
+            <input type="text" class="form-control" name = "city" />
+          </div>
+        </div>
+
+        <p style="color:red" id= "errorCity"></p>
+
+        <div class = "row">
+          <div class="form-group col-xs-5">
+            <label for="code">Country *:</label>
+            <input type="text" class="form-control" name = "country" />
+          </div>
+        </div>
+
+        <p style="color:red" id= "errorCountry"></p>
+
+        <div class = "row">
+          <div class="form-group col-xs-5">
+            <label for="code">Website:</label>
+            <input type="text" class="form-control" name = "website" />
+          </div>
+        </div>
+
+        <p id= "errorCountry">* = required</p>
+
+        <div class="form-group"><button class="btn btn-default" type="submit">submit!</button></div>
+
+     </form>
+   </body>
+

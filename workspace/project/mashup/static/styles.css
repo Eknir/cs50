@@ -1,0 +1,27 @@
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        max-height:100%;
+        overflow: hidden;
+      }
+      #map{
+        overflow: hidden;
+        height: 90%;
+        margin: 0px;
+        padding: 0px
+      }
+      #sidebar{
+      background-color: grey;
+      width:30%;
+      height:100%;
+      float:left;
+      }
+      #ranking_form{
+      visibility:hidden;
+      }
+      #header{
+      background-color:green;
+      width:100%;
+      height:40px;
+      }

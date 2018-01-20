@@ -1,0 +1,14 @@
+1.  stdint.h is a headerfile in the C library which was introduced to make code more portable between different systems
+2.  because a BYTE DWORD LONG or WORD can have different implementations in different operating systems
+3.  8, 32, 32, 16
+4.  0x4d42
+5.  26
+6.  If biHeight is negative, indicating a top-down DIB, biCompression must be either BI_RGB or BI_BITFIELDS. Top-down DIBs cannot be compressed.
+
+7.  biBitCount
+8.  if the files cannot be opened or created (respectively)
+9.  because we read the files bit by bit
+10. TODO
+11. The fseek() function sets the file position indicator for the stream pointed
+       to by stream.
+12. does something with padding

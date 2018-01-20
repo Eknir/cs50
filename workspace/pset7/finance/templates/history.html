@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<head>
+    <style>
+        table {
+            width: 100%;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<div>
+    <form action="{{ url_for('history') }}" method="POST">
+            <div class="form-group", align = "left">
+                <input autocomplete="on" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text"/>
+            </div>
+            <div class="form-group", align = "left", display = "inline">
+                <button class="btn btn-default" type="submit">Select</button>
+                <button class="btn btn-default" type="submit" formmethod = "GET">Reset selection</button>
+            </div>
+    </form>
+</div>
+<table>
+    <caption>History</caption>
+    <tr bgcolor = "#f2f2f2">
+        <th>Symbol</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Time</th>
+        <th>Buy/Sell</th>
+    </tr>
+{%for i in range(length)%}
+ <tr>
+     <td>{{symbol[i]}}</td>
+     <td>{{amount[i]}}</td>
+     <td>{{price[i]}}</td>
+     <td>{{timestamp[i]}}</td>
+     <td>{{ordertype[i]}}</td>
+</tr>
+{%endfor%}
+</table>
+{% endblock %}
+
